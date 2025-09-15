@@ -93,10 +93,10 @@ export default class NewsComponent extends Component {
           hasMore={this.state.articles.length < this.state.total}  // condition to stop fetching more articles on scrolling down
           loader={<Loader />}
         >
-          <div className='container my-4 ms-auto ps-5'>
+          <div className='container my-4 ms-auto'>
             {<div className="row mt-4">
               {this.state.articles.map((element) => {
-                return <div className="col-4" key={element.url}>
+                return <div className="col-md-4 col-12 col-sm-6" key={element.url}>
                   <NewsItem title={element.title} author={element.author} date={element.publishedAt} source={element.source.name} badgecolor={this.props.badgecolor} description={element.description} imgUrl={element.urlToImage ? element.urlToImage : download} newsUrl={element.url} />
                 </div>
               })}
