@@ -1,4 +1,4 @@
-# 📰 Daily Planet News  
+# 📰 Flash News  
 
 A React-powered news website that delivers the latest headlines from multiple categories and countries using the **NewsAPI**. The app features smooth navigation with React Router, a responsive Bootstrap-based UI, and dynamic filtering of news content.  
 
@@ -29,10 +29,10 @@ Follow these steps to run the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/daily-planet-news.git
+git clone https://github.com/your-username/flash-news.git
 
 # Navigate into the project folder
-cd daily-planet-news
+cd flash-news
 
 # Install dependencies
 npm install
