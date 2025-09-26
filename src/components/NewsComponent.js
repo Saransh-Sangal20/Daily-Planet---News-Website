@@ -77,7 +77,7 @@ export default class NewsComponent extends Component {
     let data = await fetch(`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&pageSize=6&page=${this.state.page + 1}`);
     let parsedData = await data.json();
     this.setState({
-      articles: this.state.articles.concat(parsedData.articles),
+      articles: this.state.articles?.concat(parsedData.articles),
       page: this.state.page + 1,
     });
   };
@@ -95,7 +95,7 @@ export default class NewsComponent extends Component {
         >
           <div className='container my-4 ms-auto'>
             {<div className="row mt-4">
-              {this.state.articles.map((element) => {
+              {this.state.articles?.map((element) => {
                 return <div className="col-md-4 col-12 col-sm-6" key={element.url}>
                   <NewsItem title={element.title} author={element.author} date={element.publishedAt} source={element.source.name} badgecolor={this.props.badgecolor} description={element.description} imgUrl={element.urlToImage ? element.urlToImage : download} newsUrl={element.url} />
                 </div>
