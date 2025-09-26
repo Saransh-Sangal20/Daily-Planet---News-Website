@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
+        <Router basename="/">
           <Navbar title="Flash News" />  {/* Navbar is outside Routes, to stay on every page*/}
           <LoadingBar
             color="#f11946"
