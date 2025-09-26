@@ -88,9 +88,9 @@ export default class NewsComponent extends Component {
         <h2 className='text-center' style={{marginTop: "90px"}}>Flash News - Top {this.capitalize(this.props.category)} Headlines</h2>
         {this.state.loading && <Loader />} {/* if loading is true, then show the loader */}
         <InfiniteScroll
-          dataLength={this.state.articles.length}  // defines length of articles that is to be fetched
+          dataLength={this.state.articles?.length}  // defines length of articles that is to be fetched
           next={this.fetchMoreData}  // inside is a function to fetch next page data on scrolling down
-          hasMore={this.state.articles.length < this.state.total}  // condition to stop fetching more articles on scrolling down
+          hasMore={this.state.articles?.length < this.state.total}  // condition to stop fetching more articles on scrolling down
           loader={<Loader />}
         >
           <div className='container my-4 ms-auto'>
